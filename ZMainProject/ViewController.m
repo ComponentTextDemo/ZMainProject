@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "ShowAViewController.h"
-#import "ShowBViewController.h"
+//#import "ShowAViewController.h"
+//#import "ShowBViewController.h"
+
+#import "CTMediator+AModule.h"
 @interface ViewController ()
 
 @end
@@ -29,23 +31,33 @@
     
     //
     UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button1 setTitle:@"模块B" forState:UIControlStateNormal];
+    [button1 setTitle:@"模块跳转" forState:UIControlStateNormal];
     button1.frame = CGRectMake(100, 330, 100, 100);
     button1.backgroundColor = [UIColor redColor];
-    [button1 addTarget:self action:@selector(jumpBPage) forControlEvents:UIControlEventTouchUpInside];
+    [button1 addTarget:self action:@selector(jumpShowOtherPage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button1];
     
     
 }
 
+//跳转到A模块
 - (void)jumpAPage{
-    ShowAViewController *viewCA = [[ShowAViewController alloc]init];
-    [self.navigationController pushViewController:viewCA animated:YES];
+//    ShowAViewController *viewCA = [[ShowAViewController alloc]init];
+//    [self.navigationController pushViewController:viewCA animated:YES];
+    
+    UIViewController *viewC = [[CTMediator sharedInstance] CTMediator_pushNativeGetNoticeInfoWithCallback:^(NSString * _Nonnull result) {
+        NSLog(@"%@",result);
+    }];
+    [self.navigationController pushViewController:viewC animated:YES];
     
 }
-- (void)jumpBPage{
-    ShowBViewController *viewCB = [[ShowBViewController alloc]init];
-    [self.navigationController pushViewController:viewCB animated:YES];
+- (void)jumpShowOtherPage{
+    
+//    ShowBViewController *viewCB = [[ShowBViewController alloc]init];
+//    [self.navigationController pushViewController:viewCB animated:YES];
+    
+    
+    
 }
 
 @end

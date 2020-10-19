@@ -15,6 +15,10 @@
 		18D9E5EE2537E3AF00578287 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D9E5ED2537E3AF00578287 /* main.m */; };
 		18D9E60025380ABF00578287 /* ShowAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D9E5FF25380ABF00578287 /* ShowAViewController.m */; };
 		18D9E60325380AC900578287 /* ShowBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D9E60225380AC900578287 /* ShowBViewController.m */; };
+		18EFF27A25393DB6003A37C5 /* Target_AModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EFF27925393DB6003A37C5 /* Target_AModule.m */; };
+		18EFF27E25393EA6003A37C5 /* CTMediator+AModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EFF27D25393EA6003A37C5 /* CTMediator+AModule.m */; };
+		18EFF28125393EB3003A37C5 /* CTMediator+BModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EFF28025393EB3003A37C5 /* CTMediator+BModule.m */; };
+		18EFF28425393F4A003A37C5 /* Target_BModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EFF28325393F4A003A37C5 /* Target_BModule.m */; };
 		4ECADAA4ED7157F0CE8000B8 /* libPods-ZMainProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD7B167ACCA02BC4A2B6D3D /* libPods-ZMainProject.a */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,14 @@
 		18D9E5FF25380ABF00578287 /* ShowAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowAViewController.m; sourceTree = "<group>"; };
 		18D9E60125380AC900578287 /* ShowBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowBViewController.h; sourceTree = "<group>"; };
 		18D9E60225380AC900578287 /* ShowBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowBViewController.m; sourceTree = "<group>"; };
+		18EFF27825393DB6003A37C5 /* Target_AModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_AModule.h; sourceTree = "<group>"; };
+		18EFF27925393DB6003A37C5 /* Target_AModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_AModule.m; sourceTree = "<group>"; };
+		18EFF27C25393EA6003A37C5 /* CTMediator+AModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTMediator+AModule.h"; sourceTree = "<group>"; };
+		18EFF27D25393EA6003A37C5 /* CTMediator+AModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+AModule.m"; sourceTree = "<group>"; };
+		18EFF27F25393EB3003A37C5 /* CTMediator+BModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTMediator+BModule.h"; sourceTree = "<group>"; };
+		18EFF28025393EB3003A37C5 /* CTMediator+BModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CTMediator+BModule.m"; sourceTree = "<group>"; };
+		18EFF28225393F4A003A37C5 /* Target_BModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_BModule.h; sourceTree = "<group>"; };
+		18EFF28325393F4A003A37C5 /* Target_BModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_BModule.m; sourceTree = "<group>"; };
 		581838B57F8204186418372A /* Pods-ZMainProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZMainProject.release.xcconfig"; path = "Target Support Files/Pods-ZMainProject/Pods-ZMainProject.release.xcconfig"; sourceTree = "<group>"; };
 		8DD7B167ACCA02BC4A2B6D3D /* libPods-ZMainProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZMainProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53001BE67FBEEA8919DB262 /* Pods-ZMainProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZMainProject.debug.xcconfig"; path = "Target Support Files/Pods-ZMainProject/Pods-ZMainProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,8 +83,9 @@
 		18D9E5DA2537E3AD00578287 /* ZMainProject */ = {
 			isa = PBXGroup;
 			children = (
-				18D9E5FD25380A9600578287 /* BModule */,
-				18D9E5FC25380A7800578287 /* AModule */,
+				18EFF27B25393E5D003A37C5 /* CTMediatorGroup */,
+				18D9E5FD25380A9600578287 /* AAModule */,
+				18D9E5FC25380A7800578287 /* BBModule */,
 				18D9E5DB2537E3AD00578287 /* AppDelegate.h */,
 				18D9E5DC2537E3AD00578287 /* AppDelegate.m */,
 				18D9E5E12537E3AD00578287 /* ViewController.h */,
@@ -86,22 +99,37 @@
 			path = ZMainProject;
 			sourceTree = "<group>";
 		};
-		18D9E5FC25380A7800578287 /* AModule */ = {
+		18D9E5FC25380A7800578287 /* BBModule */ = {
 			isa = PBXGroup;
 			children = (
 				18D9E60125380AC900578287 /* ShowBViewController.h */,
 				18D9E60225380AC900578287 /* ShowBViewController.m */,
+				18EFF28225393F4A003A37C5 /* Target_BModule.h */,
+				18EFF28325393F4A003A37C5 /* Target_BModule.m */,
 			);
-			path = AModule;
+			path = BBModule;
 			sourceTree = "<group>";
 		};
-		18D9E5FD25380A9600578287 /* BModule */ = {
+		18D9E5FD25380A9600578287 /* AAModule */ = {
 			isa = PBXGroup;
 			children = (
+				18EFF27825393DB6003A37C5 /* Target_AModule.h */,
+				18EFF27925393DB6003A37C5 /* Target_AModule.m */,
 				18D9E5FE25380ABF00578287 /* ShowAViewController.h */,
 				18D9E5FF25380ABF00578287 /* ShowAViewController.m */,
 			);
-			path = BModule;
+			path = AAModule;
+			sourceTree = "<group>";
+		};
+		18EFF27B25393E5D003A37C5 /* CTMediatorGroup */ = {
+			isa = PBXGroup;
+			children = (
+				18EFF27C25393EA6003A37C5 /* CTMediator+AModule.h */,
+				18EFF27D25393EA6003A37C5 /* CTMediator+AModule.m */,
+				18EFF27F25393EB3003A37C5 /* CTMediator+BModule.h */,
+				18EFF28025393EB3003A37C5 /* CTMediator+BModule.m */,
+			);
+			path = CTMediatorGroup;
 			sourceTree = "<group>";
 		};
 		2AEC3C05072AAA23C9884838 /* Frameworks */ = {
@@ -118,7 +146,6 @@
 				D53001BE67FBEEA8919DB262 /* Pods-ZMainProject.debug.xcconfig */,
 				581838B57F8204186418372A /* Pods-ZMainProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -220,9 +247,13 @@
 			files = (
 				18D9E5E32537E3AD00578287 /* ViewController.m in Sources */,
 				18D9E60025380ABF00578287 /* ShowAViewController.m in Sources */,
+				18EFF27A25393DB6003A37C5 /* Target_AModule.m in Sources */,
 				18D9E5DD2537E3AD00578287 /* AppDelegate.m in Sources */,
+				18EFF27E25393EA6003A37C5 /* CTMediator+AModule.m in Sources */,
 				18D9E60325380AC900578287 /* ShowBViewController.m in Sources */,
 				18D9E5EE2537E3AF00578287 /* main.m in Sources */,
+				18EFF28425393F4A003A37C5 /* Target_BModule.m in Sources */,
+				18EFF28125393EB3003A37C5 /* CTMediator+BModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
